@@ -50,3 +50,8 @@ int main () {
 
 // Output:
 //    Compilation error that argc and argv have not be declared
+
+// An important thing to note about argc and argv is that they do not have to be named as such. Their names can be 
+// anything as long as the data types are correct. However, argc and argv are the typical names of the variables and
+// are almost immediately recognizable in a program as oppossed to a custom variable name. These names are also
+// indicative of their purpose within the program (argc = argument count, argv = argument vector).
