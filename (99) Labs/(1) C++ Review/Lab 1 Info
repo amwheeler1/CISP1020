@@ -1,0 +1,19 @@
+This lab was a review of C++ for the beginning of the semester. It prompts the user for an input file, reads in the data, and prints out
+formatted information based on the input file. The reactionary behavior based on the input file is as follows:
+    -If the file does not exist, an error message is printed out.
+    -If the file is empty, an error message stating so is printed.
+    -If a file containing less than the maximum number entries is read in, the number of entries read in are sorted and printed.
+    -If a file containing exactly the maximum number of entries is read in, the entries are sorted and printed.
+    -If a file containing more than the maximum number of entries is read in, anything past the maximum number is ignored.
+
+Sorting uses a selection sort and sorts the entries based on the state's name. Input files are assumed to be formatted correctly with no errors
+present. The program will not account for errors, but will account for more than the maximum number of entires by ignoring everything past the
+maximum entry from the file.
+
+C-strings were used in-leiu of the string data type, even though the program is written in C++. This was a requirement of the lab. Theorhetically,
+modification of the program to use the strings data type should not be too difficult, but I've got no plans of doing so.
+
+Building the program can be done using C++ and the included makefile. 'make clean' can be used to remove the generated executable, object files, 
+and pre-compiled headers.
+
+The 'src' directory contains the source code and makefile, and the 'tests' directory includes files used to test the program.
