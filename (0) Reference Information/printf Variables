@@ -1,0 +1,26 @@
+printf can print out a number of data types to console. To do this, placeholders, delimited using %, are put in the format string
+of the function call, and then in a separate field of the function call the variable that corresponds to that data type is specified.
+
+==Common Data Types==
+%c  - Character
+%d  - Integer
+%s  - C-String
+%f  - Float
+%lf - Long Float (aka Double)
+%u  - Unsigned Integer
+
+==Uncommon Data Types==
+%o  - Octal
+%p  - Pointer
+%x  - Hexadecimal
+
+Usage:
+...
+
+    int myInt = 15;
+    char myString [] = {'B', 'O', 'B'};
+    
+    printf("Name: %s Age: %d", myString, myInt);    // Output: Name: BOB Age: 15
+    printf("Integer Casted as Hex: %x", myInt);     // Output: Integer Casted as Hex: f
+    
+...
