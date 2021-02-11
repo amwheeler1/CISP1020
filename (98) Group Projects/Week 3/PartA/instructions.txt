@@ -1,0 +1,6 @@
+Create a program that searches through sorted data using the following algorithms:
+    Linear Search
+    Iterative Binary Search
+    Recursive Binary Search
+    
+Also, count the number of comparisons and iterations made by each algorithm.
