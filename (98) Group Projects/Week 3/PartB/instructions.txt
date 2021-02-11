@@ -1,0 +1,1 @@
+Create a stack, a LIFO (Last-In, First-Out) data structure within an array and program its push and pop instructions.
