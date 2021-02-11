@@ -3,6 +3,10 @@
 #include <stdio.h>  // stdio (standard IO) is the basic header required by C to send and receive information
 // on the terminal; it defines, among other things, stdin (standard in) and stdout (standard out)
 
+//========================================================================================================================
+// printf()
+#include <stdio.h>
+
 int main () {
     // Information can be sent to the terminal using the printf() command
     printf("\nHello, World!\n");
@@ -12,9 +16,10 @@ int main () {
     age = 23;
     printf("\nYour age is: %d\n", age);
     // The syntax of printf() is very similar to a function call (because it is a function)
-    // Official Syntax: printf(const char* format, ...);
+    // Official Syntax: int printf(const char* format, ...);
     //     const char* format: A C-string; variables can be delimted using % followed by a character to indicate data type
     //     ...: The variables indicated in [const char* format] in the order they appear
+    //     Returns: int, total number of characters written to stdout
 
     return 0;
 }
@@ -66,8 +71,22 @@ int main () {
 //   \n     3.141
 
 //========================================================================================================================
+// scanf()
 #include <stdio.h>
 
 int main () {
-
+    // prinft has a counterpart called scanf that reads data in from stdin
+    // For scanf to work, a data type and a destination must be specified
+    // Official Syntax: int scanf (const char* format, ...);
+    //     const char* format: The data types to be read
+    //     ...: The destination variables that correspond to the data types in [const char* format]
+    //     Returns: int, the number of variables successfully filled by the read from stdin
+    int myInt = 0;
+    char myString [10];
+    double myDouble = 0.0;
+    scanf("%d %s %lf", &myInt, myString, &myDouble);
+    // A caveat of scanf is that the variable to which the data is being stored must be specified as the address of the
+    //     variable instead of its label
+    // This is also a good example of how arrays do not need the address of (&) operator beacause they are essentially a
+    //     series of address; myString is a C-string, which is an array of characters, and does not need & in scanf
 }
