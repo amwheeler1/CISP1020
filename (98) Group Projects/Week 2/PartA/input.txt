@@ -1,0 +1,5 @@
+A 123456.78
+John 9999.99
+Bubba 1.00
+Charlie 65.43
+Twenty_charactersabc 999999.99
