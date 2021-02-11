@@ -1,0 +1,20 @@
+Read in data from the terminal in the following order:
+
+    Name (C-String)
+    Salary (floating-point)
+ 
+
+Print formatted data back to the terminal as such:
+
+Name                     Salary
+--------------------------------
+A                    $ 123456.78
+John                 $   9999.99
+Bubba                $      1.00
+Charlie              $     65.43
+Twenty_charactersabc $ 999999.99
+
+
+Input to terminal was simulated using the '<' operator:
+
+[user@ssh_terminal partA]$ ./salary <input.txt
