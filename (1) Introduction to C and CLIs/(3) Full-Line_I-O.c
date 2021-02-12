@@ -44,3 +44,34 @@ int main () {
      
      return 0;
 }
+
+// Input:
+//      > I Wanna Be a Cowboy!
+//
+// Output:
+//     I Wanna Be a Cowboy!\n
+
+//========================================================================================================================
+// fputs()
+// fputs is intended to act in a simlar manner to puts, but is instead intended to be used with files
+// Official Syntax: int fputs (const char* str, FILE* stream);
+//     const char* str: The C-string to be written out
+//     FILE* stream: A pointer to a file stream, can also be substituted with stdout
+//     Returns: A non-negative number is write is successful, EOF if an error has occurred
+
+int main () {
+    char myString [15];
+    
+     fgets(myString, 15, stdin);
+     myString[strlen(myString)-1] = '\0';
+    
+    fputs(myString, stdout);    // In this instance, fputs works exactly the same as puts, writing a C-string to stdout
+    
+    return 0;
+}
+
+// Input:
+//     > Potato Salad
+//
+// Output:
+//     Potato Salad
