@@ -84,7 +84,7 @@ int main () {
     int myInt = 0;
     char myString [10];
     double myDouble = 0.0;
-    scanf("%d %s %lf", &myInt, myString, &myDouble);
+    scanf("%d%s%lf", &myInt, myString, &myDouble);
     // A caveat of scanf is that the variable to which the data is being stored must be specified as the address of the
     //     variable instead of its label
     // This is also a good example of how arrays do not need the address of (&) operator beacause they are essentially a
