@@ -1,0 +1,110 @@
+#include <stdio.h>  // Needed to use these functions
+
+
+
+fflush() - Removes unwritten data that is still in the buffer of the stream
+    int fflush (FILE* stream);
+    
+    Parameters:
+        FILE* stream: A pointer to a file; can be substituted with stdin or stdout
+    
+    Returns:
+        int: Returns 0 if operation is successful, EOF if an error occurs
+
+Read More: http://www.cplusplus.com/reference/cstdio/fflush/
+
+
+
+fgets() - Reads an entire line from stdin (including whitespace) and store it in a C-string
+    char* fgets (char* str, int num, FILE* stream);
+    
+    Parameters:
+        char* str: The destination C-string for what is read in from stream
+        int num: The number of characters to read in from stream
+        FILE* stream: A pointer to a file; can be substituted with stdin
+    
+    Returns:
+        char*: Returns the value of str if successful, *NULL if EOF or a read error occurs
+
+Read More: http://www.cplusplus.com/reference/cstdio/fgets/
+
+
+
+fputs() - Writes an entire line to a pointer to a file (FILE* )
+    int fputs (const char* str, FILE* stream);
+    
+    Parameters:
+        const char* str: The C-string to be written to stream
+        FILE* stream: A pointer to a file, can be substituted with stdout
+    
+    Returns:
+        int: Returns a non-negative number if write is successful, EOF if unsuccessful
+
+Read More: http://www.cplusplus.com/reference/cstdio/fputs/
+
+
+
+getchar() - Gets a single char, as an integer, from stdin
+    int getchar (void);
+    
+    Parameters:
+        void: Nothing
+        
+    Returns:
+        int: The character read in from stdin as an integer; can be casted to a char datatype
+
+Read More: http://www.cplusplus.com/reference/cstdio/getchar/
+
+
+
+printf() - Prints a C-string to stdout; can also print variables within that C-string
+    int printf (const char* format, ...);
+    
+    Parameters:
+        const char* format: The C-string to be printed to stdout; variables can be specified within the C-string using %
+        ...: The variables that correspond to those specified in the format C-string
+        
+    Returns:
+        int: The total number of characters printed to stdout if successful, a negative number if a writing error occurs
+        
+Read More: http://www.cplusplus.com/reference/cstdio/printf/
+
+
+
+putchar() - Writes a single character to stdout
+    int putchar(int character);
+    
+    Parameters:
+        int character: The character written to stdout as an integer
+    
+    Returns:
+        int: The integer value of the character value if successful, EOF if a writing error occurs
+    
+Read More: http://www.cplusplus.com/reference/cstdio/putchar/
+
+
+
+puts() - Writes a C-string to stdout, ignoring whitespace as delimiters
+    int puts (const char* str);
+    
+    Parameters:
+        const char* str: The C-string to be written to stdout
+    
+    Returns:
+        int: A non-negative value if writing is successful, EOF if an error occurs
+
+Read More: http://www.cplusplus.com/reference/cstdio/puts/
+   
+   
+        
+scanf() - Reads data from stdin up to a whitespace character
+    int scanf (const char* format, ...);
+    
+    Parameters:
+        const char* format: A C-string used to specify the parameters being read in from stdin
+        ...: The variables that correspond to those specified in the format C-string (MUST BE MEMORY ADDRESSES)
+        
+    Returns:
+        int: The total number of items read in from stdout if successful, EOF if end-of-file is reached
+        
+Read More: http://www.cplusplus.com/reference/cstdio/scanf/
