@@ -1,0 +1,48 @@
+Makefiles are useful for compiling programs with a large amount of source files using a single command.
+
+Assume the Following Files:
+    main.c
+    ioHandle.h
+    ioHandle.c
+    fHandle.h
+    fHandle.c
+
+//========================================================================================================================
+
+The makefile for these files might look like:
+
+CC=gcc
+CFLAGS= -c -Wall
+
+all: myProgram
+
+myProgram: main.c fHandle.o ioHandle.o
+    $(CC) main.c fHandle.o ioHandle.o -o myProgram
+    
+fHandle: fHandle.h fHandle.c
+    $(CC) $(CFLAGS) fHandle.c
+    
+ioHandle: ioHandle.h ioHandle.c
+    $(CC) $(CFLAGS) ioHandle.c
+    
+clean:
+    rm -rf *.0 *.gch myProgram
+    
+//========================================================================================================================
+
+make requries the formatting of the file to be precise. A target block requires a target name (all, myProgram, fHandle,
+ioHandle, clean, etc.). On that same line, if files need to be compiled, the files needed for compilation have to be
+listed. The lines for that block that follow this first line must each have an indent before listing any other text. This
+indent MUST BE A TAB, it cannot be spaces. Follwing the tab, the command to be ran is written out.
+
+"Constants" for the makefile can be declared by creating a lable, followed by an equal sign, then the command the constant
+represents. Both CC and CFLAGS above are examples of this.
+
+Accessing a constant in the makefile is done by placing the constant in parentheses and placing a dollar sign ($) before
+that. $(CC) and $(CFLAGS) use the values of CC and CFLAGS respectively in the compilation program.
+
+
+
+Additional Information:
+https://www.tutorialspoint.com/unix_commands/make.htm
+https://man7.org/linux/man-pages/man1/make.1.html
