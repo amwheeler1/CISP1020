@@ -1,0 +1,2 @@
+The objective of this program was to design a program that implemented a circular queue and its
+enqueue and dequeue functions.
