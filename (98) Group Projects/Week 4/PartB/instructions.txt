@@ -1,0 +1,2 @@
+The purpose of this project was to take a binary file, open it using fread in binary mode, and read in
+the data using assumed file structure.
